@@ -26,7 +26,7 @@ class covidProvider extends ChangeNotifier
         ferterList.clear();
         for(var c in covidList)
           {
-            if(c.country!.toLowerCase().contains(serch!.toLowerCase()));
+            if(c.country!.toLowerCase().contains(serch!.toLowerCase()))
               {
                 ferterList.add(c);
               }
