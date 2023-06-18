@@ -31,8 +31,8 @@ class _ViewScreenState extends State<ViewScreen> {
           //   },itemCount: list.length,),
           // ),
           // Text("${model.country}"),
-          Text("${model.deaths}"),
-          Text("${model.countryInfo!.flag}")
+          // Text("${index}"),
+          Text("${model.country}")
           // Container(
           //   child: Text("${providerF!.list[0].country}"),
           // ),
