@@ -21,7 +21,7 @@ class _ViewScreenState extends State<ViewScreen> {
 
     // List list= ModalRoute.of(context)!.settings.arguments as List;
     int index= ModalRoute.of(context)!.settings.arguments as int;
-   CovidModel model=ModalRoute.of(context)!.settings.arguments as CovidModel;
+   // CovidModel model=ModalRoute.of(context)!.settings.arguments as CovidModel;
     return SafeArea(child: Scaffold(
       body: Column(
         children: [
@@ -32,10 +32,11 @@ class _ViewScreenState extends State<ViewScreen> {
           // ),
           // Text("${model.country}"),
           // Text("${index}"),
-          Text("${model.country}")
-          // Container(
-          //   child: Text("${providerF!.list[0].country}"),
-          // ),
+          // Text("${model.country}"),
+          // Text("${model.countryInfo!.id}"),
+          Container(
+            child: Text("${providerT!.covidList[index].country}"),
+          ),
         ],
       ),
     ),);

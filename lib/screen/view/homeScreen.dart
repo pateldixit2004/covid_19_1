@@ -46,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   return ListView.builder(itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
-                        CovidModel covidModel=CovidModel(country: list[index].country);
-                        Navigator.pushNamed(context, 'view',arguments: covidModel);
+                        // CovidModel covidModel=CovidModel(country: list[index].country,);
+                        Navigator.pushNamed(context, 'view',arguments: index);
                       },
                       child: ListTile(
                         title: Text("${list[index].country}"),
