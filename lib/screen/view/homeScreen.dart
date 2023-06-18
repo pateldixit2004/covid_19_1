@@ -1,4 +1,5 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -40,12 +41,20 @@ class _HomeScreenState extends State<HomeScreen> {
               }
               else if(snapshot.hasData)
                 {
+
                   List<CovidModel>? list=snapshot.data!.cast<CovidModel>();
                   return ListView.builder(itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: Text("${list[index].country}"),
+                    return InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'view',arguments: CovidModel);
+                      },
+                      child: ListTile(
+                        title: Text("${list[index].country}"),
+                        leading: Image.network('${list[index].countryInfo!.flag}',height: 50,width: 50,),
+
+                      ),
                     );
-                  },itemCount: list!.length,);
+                  },itemCount: list.length,);
                 }
               return Center(child: CircularProgressIndicator());
             },),

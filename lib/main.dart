@@ -2,6 +2,7 @@
 import 'package:covid_19_1/screen/provider/covidProvider.dart';
 import 'package:covid_19_1/screen/view/homeScreen.dart';
 import 'package:covid_19_1/screen/view/serchScreen.dart';
+import 'package:covid_19_1/screen/view/view_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 void main()
@@ -15,6 +16,7 @@ void main()
         debugShowCheckedModeBanner: false,
         routes: {
           '/':(context)=>HomeScreen(),
+          'view':(context)=>ViewScreen(),
           'serch':(context)=>SerchScreen(),
         },
       ),
